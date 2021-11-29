@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Examen Jonathan Adriano</title>
+  <link rel="shortcut icon" href="imagenes/icon.ico">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="app.component.css" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  border-top: bisque;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.row{
+    margin-left: 300px;
+}
+</style>
+<body>
+    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+              </button>
+              <a class="navbar-brand" href="#myPage"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="app.component.html">HOME</a></li>
+                <li><a href="catalogo.html">CATALOGO</a></li>
+                <li><a href="negocios.html">NEGOCIOS</a></li>
+                <li><a href="jonathan.html">INFORMACION</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+
+        <br>
+        <br>
+        <br>
+
+<h2 style="text-align:center">NEGOCIOS</h2>
+<br>
+<br>
+
+<div class="row">
+  <div class="column">
+    <center><b>"ESTACIÓN DEL ASEO"</b></center>
+    <br>
+    <img src="imagenes/estacionaseo/afueraes.jpeg" style="height: 251px; width: 249px;" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+    <br>
+    <p style="text-align: justify;"><b>Descripción:</b></p>
+    <p>Venta de articulos de limpieza y aseo personal</p>
+    <br>
+    <p><b>Horario de atencion:</b></p>
+    <p><b>Lunes-Sabado:</b>09:30 - 18:30</p>
+</div>
+  <div class="column">
+    <center><b>BARBERIA Y PELUQUERIA "LATINA"</b></center>
+    <img src="imagenes/barberia/afuera.jpeg" style="height: 251px; width: 249px;" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+    <br>
+    <p style="text-align: justify;"><b>Descripción:</b></p>
+    <p>Cortes para cabelleros con estilos urbanos </p>
+    <br>
+    <p><b>Horario de atencion:</b></p>
+    <p><b>Lunes-Sabado:</b>10:30 - 20:00</p>
+  </div>
+  <div class="column">
+    <center><b>PETSHOP </b></center>
+    <center><b>"HOME PET J&J"</b></center>
+    <img src="imagenes/petshop/afuera.jpeg" style="height: 251px; width: 249px;" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+    
+    <p style="text-align: justify;"><b>Descripción:</b></p>
+    <p>Venta de alimentos para mascotas,accesorios para mascotas y peluqueria canina </p>
+    <p><b>Horario de atencion:</b></p>
+    <p><b>Lunes-Domingo:</b>08:30 - 21:00</p>
+  </div>
+  
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <a href="negocios.html"><div class="numbertext">X</div></a>
+      <img src="imagenes/estacionaseo/entrevista.jpeg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <a href="negocios.html"><div class="numbertext">X</div></a>
+      <img src="imagenes/estacionaseo/WhatsApp Image 2021-11-28 at 10.56.32 AM(1).jpeg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <a href="negocios.html"><div class="numbertext">X</div></a>
+      <img src="imagenes/estacionaseo/esdentro2.jpeg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <a href="negocios.html"><div class="numbertext">X</div></a>
+      <img src="imagenes/estacionaseo/esdentro.jpeg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <a href="negocios.html"><div class="numbertext">X</div></a>
+      <img src="imagenes/barberia/WhatsApp Image 2021-11-28 at 10.56.35 AM.jpeg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <a href="negocios.html"><div class="numbertext">X</div></a>
+      <img src="imagenes/barberia/local.jpeg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <a href="negocios.html"><div class="numbertext">X</div></a>
+      <img src="imagenes/petshop/local.jpeg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <a href="negocios.html"><div class="numbertext">X</div></a>
+      <img src="imagenes/petshop/entrevista.jpeg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <a href="negocios.html"><div class="numbertext">X</div></a>
+      <img src="imagenes/petshop/local.jpeg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <a href="negocios.html"><div class="numbertext">X</div></a>
+      <img src="imagenes/restaurant/entrevista.jpeg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <a href="negocios.html"><div class="numbertext">X</div></a>
+      <img src="imagenes/restaurant/local.jpeg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <a href="negocios.html"><div class="numbertext">X</div></a>
+      <img src="imagenes/pizzeria/entrevista.jpeg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <a href="negocios.html"><div class="numbertext">X</div></a>
+      <img src="imagenes/pizzeria/local1.jpeg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <a href="negocios.html"><div class="numbertext">X</div></a>
+      <img src="imagenes/panaderia/entrevista.jpeg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <a href="negocios.html"><div class="numbertext">X</div></a>
+      <img src="imagenes/panaderia/local.jpeg" style="width:100%">
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+    
+
+    
+  </div>
+</div>
+<br>
+<br>
+<br>
+
+<div class="row">
+  <div class="column">
+    <center><b>RESTAURANTE </b></center>
+    <center><b>"SAL SI PUEDES"</b></center>
+    
+    <img src="imagenes/restaurant/afuera.jpeg" style="height: 251px; width: 249px;" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+    <br>
+    <p style="text-align: justify;"><b>Descripción:</b></p>
+    <p>Ofrece una gran variedad gastronomica como: Pescados y corvinas fritas acompañadas de bebidas tipicas quiteñas </p>
+    <br>
+    <p><b>Horario de atencion:</b></p>
+    <p><b>Jueves-Domingo:</b>10:00 - 22:00</p>
+  </div>
+  <div class="column">
+    <b>PIZZERIA "BLACK & WHITE"</b>
+    <br>
+    <br>
+    <img src="imagenes/pizzeria/afuera.jpeg" style="height: 251px; width: 249px;" onclick="openModal();currentSlide(12)" class="hover-shadow cursor">
+    <br>
+    <p style="text-align: justify;"><b>Descripción:</b></p>
+    <p>Ofrece pizzas de diferentes tamaños e ingredientes y comida rapida  </p>
+    <br>
+    <br>
+    <p><b>Horario de atencion:</b></p>
+    <p><b>Lunes-Domingo:</b>13:00 - 22:00</p>
+  </div>
+  <div class="column">
+    <b style="text-align: center;">PANADERIA Y PASTELERIA </b>
+    <center><b style="text-align: center;">"EL CARACOL"</b></center>
+    <img src="imagenes/panaderia/afuera.jpeg" style="height: 251px; width: 249px;" onclick="openModal();currentSlide(14)" class="hover-shadow cursor">
+    <br>
+    <p style="text-align: justify;"><b>Descripción:</b></p>
+    <p>Ofrece gran variedad de panes y postres  </p>
+    <br>
+    <br>
+    <br>
+    <p><b>Horario de atencion:</b></p>
+    <p><b>Lunes-Domingo:</b>06:00 - 22:00</p>
+  </div>
+ 
+</div>
+
+
+
+<script>
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+function openModal2() {
+  document.getElementById("myModal1").style.display = "block";
+}
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+    
+</body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<footer class="text-center">
+    <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+      <span class="glyphicon glyphicon-chevron-up"></span>
+    </a><br><br>
+    <p>Jonathan Adriano &reg;<a href="https://www.w3schools.com" data-toggle="tooltip" title="Visit w3schools"></a></p> 
+  </footer>
+  
+</html>
